@@ -1,0 +1,13 @@
+
+.piska {
+    color: red;
+}
+
+
+
+
+@media(max-width: 768px) {
+    .piska {
+        color: green;
+    }
+}
