@@ -5,7 +5,6 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 100%;
         font-family: 'JetBrains Mono', monospace;
         border-radius: 0.5rem;
         color: white;
