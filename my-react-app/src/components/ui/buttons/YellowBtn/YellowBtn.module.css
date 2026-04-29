@@ -1,0 +1,27 @@
+
+
+@media(max-width: 768px) {
+    .yellow_btn{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.5rem; 
+        width: 100%;
+        font-family: 'JetBrains Mono', monospace;
+        border-radius: 0.5rem;
+        background-color: #D0FF00;
+        color: #020202;
+    }
+
+    .btn__icon { 
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: 0.5rem;
+        justify-content: center;
+    }
+}
