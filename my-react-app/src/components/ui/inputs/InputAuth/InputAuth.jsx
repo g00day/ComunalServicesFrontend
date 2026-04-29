@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import styles from './InputAuth.module.css'
-import showPassIcon from '../../../../public/icons/show_pass_16x10.svg'
+import showPassIcon from '@icons/show_pass_16x10.svg'
 
-const InputAuth = ({isPass, title}) => {
+const InputAuth = ({title, ...props}) => {
 
     const [isShown, setIsShown] = useState(false);
 
-    const inputType = isPass ? (isShown ? "text" : "password") : "text";
+    const isPassword = props.type === 'password';
+
+    const inputType = isPassword ? (isShown ? "text" : "password") : "text";
 
     const togglePass = () => {
         setIsShown(!isShown);
@@ -18,10 +20,10 @@ const InputAuth = ({isPass, title}) => {
         <div className={styles.input__wrapper}>
             <input
                 type={inputType}
-                placeholder={isPass ? "Введите пароль..." : "Введите текст..."}
+                placeholder={isPassword ? "Введите пароль..." : "Введите текст..."}
                 className={styles.input__field}
             />
-            {isPass && (
+            {isPassword && (
                 <img src={showPassIcon} alt="icon" className={styles.show_pass_icn} onClick={togglePass}></img>
             )}
         </div>

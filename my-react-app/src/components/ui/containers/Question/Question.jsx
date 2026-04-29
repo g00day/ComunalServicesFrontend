@@ -1,6 +1,6 @@
 import styles from './Question.module.css';
-import openIcon from '../../../../public/icons/open_answer.svg';
-import closeIcon from '../../../../public/icons/close_answer.svg';
+import openIcon from '@icons/open_answer.svg';
+import closeIcon from '@icons/close_answer.svg';
 
 const Principe = ({questionText, answerText, isActive=false, onClick }) => {
 
