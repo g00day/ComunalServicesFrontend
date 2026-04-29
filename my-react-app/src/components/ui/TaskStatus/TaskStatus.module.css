@@ -1,0 +1,48 @@
+
+
+@media(max-width: 768px) {
+    .created {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.5rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #1A73E8;
+        color: #F9F9F9;
+    }
+
+    .in_work {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.5rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #D0FF00;
+        color: #000000;
+    }
+
+    .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.5rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #E03B16;
+        color: #F9F9F9;
+    }
+}
