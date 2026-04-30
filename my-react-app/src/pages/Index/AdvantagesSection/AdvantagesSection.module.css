@@ -1,0 +1,18 @@
+
+@media(max-width: 768px) {
+
+    .advantages__container {
+        font-family: 'JetBrains Mono', monospace;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .advantages__header {
+        line-height: 0.9;
+        color: #FFFFFF;
+        font-size: 2.25rem; 
+        font-weight: 700;
+        width: 100%;
+        padding: 1.5rem 2rem;
+    }
+}
