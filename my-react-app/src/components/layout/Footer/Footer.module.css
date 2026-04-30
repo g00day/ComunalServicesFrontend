@@ -1,13 +1,72 @@
+.footer {
+  background-color: #181818;
+  color: #a0a0a0;
+  padding: 20px;
+  font-family: Inter;
+  font-size: 0.5rem;
+  color: white;
+}
 
-.piska {
-    color: red;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
+.contentWrapper {
+  display: flex;
+  justify-content: space-between; 
+
+  align-items: center; 
+
+}
+
+.title {
+  margin: 0 0 12px 0;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
 
 
-@media(max-width: 768px) {
-    .piska {
-        color: green;
-    }
+.label {
+  white-space: nowrap;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.faq {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+    font-size: 13px;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .contentWrapper {
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  .contactRow {
+    flex-wrap: wrap; 
+    gap: 4px;
+  }
 }

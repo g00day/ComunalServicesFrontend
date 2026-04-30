@@ -7,7 +7,7 @@ import Footer from "./components/layout/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 // Pages
-import IndexPage from '@/pages/IndexPage';
+import IndexPage from '@/pages/Index/IndexPage';
 
 
 
