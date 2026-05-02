@@ -6,7 +6,7 @@ const Principe = ({title, text, num}) => {
 
     return (
         <div className={styles.principe}>
-            <div class="principe__content">
+            <div className={styles.principe__content}>
                 <h1 className={styles.principe__header}>
                     {title}
                 </h1>
