@@ -8,6 +8,8 @@
         white-space: nowrap;
         padding: 0.25rem 0.5rem 0.25rem 0.5rem;
         border-radius: 1rem;
+        max-width: 3.5rem;
+        max-height: 1rem;
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.5rem;
         width: 100%;
@@ -21,6 +23,8 @@
         justify-content: center;
         align-items: center;
         white-space: nowrap;
+        max-width: 3.5rem;
+        max-height: 1rem;
         padding: 0.25rem 0.5rem 0.25rem 0.5rem;
         border-radius: 1rem;
         font-family: 'JetBrains Mono', monospace;
@@ -36,6 +40,8 @@
         justify-content: center;
         align-items: center;
         white-space: nowrap;
+        max-width: 3.5rem;
+        max-height: 1rem;
         padding: 0.25rem 0.5rem 0.25rem 0.5rem;
         border-radius: 1rem;
         font-family: 'JetBrains Mono', monospace;
