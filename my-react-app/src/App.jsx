@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 // Pages
 import IndexPage from '@/pages/Index/IndexPage';
+import FeedbackPage from '@/pages/Feedback/FeedbackPage';
 
 
 
@@ -20,6 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<IndexPage />} />
+        <Route path="feedback/" element={<FeedbackPage/>}/>
       </Routes>
     </BrowserRouter>
     <Footer/>
