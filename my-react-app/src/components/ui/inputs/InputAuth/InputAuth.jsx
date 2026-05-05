@@ -15,19 +15,19 @@ const InputAuth = ({title, ...props}) => {
     };
 
     return (
-    <div className={styles.input__container}>
-        <p className={styles.input__header}>{title}</p>
-        <div className={styles.input__wrapper}>
-            <input
-                type={inputType}
-                placeholder={isPassword ? "Введите пароль..." : "Введите текст..."}
-                className={styles.input__field}
-            />
-            {isPassword && (
-                <img src={showPassIcon} alt="icon" className={styles.show_pass_icn} onClick={togglePass}></img>
-            )}
+        <div className={styles.input__container}>
+            <p className={styles.input__header}>{title}</p>
+            <div className={styles.input__wrapper}>
+                <input
+                    type={inputType}
+                    placeholder={isPassword ? "Введите пароль..." : "Введите текст..."}
+                    className={styles.input__field}
+                />
+                {isPassword && (
+                    <img src={showPassIcon} alt="icon" className={styles.show_pass_icn} onClick={togglePass}></img>
+                )}
+            </div>
         </div>
-    </div>
     )
 }
 
