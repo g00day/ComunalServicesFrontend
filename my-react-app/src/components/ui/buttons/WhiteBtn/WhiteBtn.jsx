@@ -1,17 +1,21 @@
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 import styles from './WhiteBtn.module.css'
 
 const WhiteBtn = ({compHeight="32px", isLink=false, children, ...props }) => {
-    if(isLink) {
+    if (isLink) {
         return (
-        <Link {...props} className={styles.white_btn}>
-            {children}
-        </Link>
-        )
+            <Link 
+                style={{ height: compHeight, display: 'flex', alignItems: 'center', justifyContent: 'center' }} 
+                className={styles.white_btn} 
+                {...props}
+            >
+                <p className={styles.white_btn__text}>{children}</p>
+            </Link>
+        );
     } else {
             return (
                 <button style={{heigth: {compHeight}}} className={styles.white_btn}>
-                    {children}
+                    <p className={styles.white_btn__text}>{children}</p>
                 </button>
             )
     }
