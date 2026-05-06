@@ -14,6 +14,8 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@pages': path.resolve(__dirname, './src/pages'),
       'react': path.resolve(__dirname, 'node_modules/react'),
+      // public aliases
+      '@p': path.resolve(__dirname, "./public"),
       '@icons': path.resolve(__dirname, './public/icons'),
     },
   },
