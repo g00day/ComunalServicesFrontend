@@ -1,5 +1,28 @@
+@media(min-width: 768px){
+    .buttons__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15rem;
+        gap: 2rem;
+    }
 
-@media(max-width: 768px) {
+    .link__route {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        color: rgba(247,247,247,0.6);
+        text-decoration: none;
+    }
+
+    .desktop_input__wrapper {
+        width: 100%;
+    }
+}
+
+
+
+@media(max-width: 767px) {
 
     .buttons__wrapper{
         display: flex;

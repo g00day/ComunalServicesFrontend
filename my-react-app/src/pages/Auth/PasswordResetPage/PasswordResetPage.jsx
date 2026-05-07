@@ -7,8 +7,10 @@ import {Link} from 'react-router-dom'
 const PasswordResetPage = () => {
     return (
         <AuthSection header={"Восстановление пароля"}>
-            <InputAuth title={"Новый пароль"} type="text"/>
-            <InputAuth title={"Новый пароль(повторно)"} type="password"/>
+            <div className={styles.desktop_input__wrapper}>
+                <InputAuth title={"Новый пароль"} type="text"/>
+                <InputAuth title={"Новый пароль(повторно)"} type="password"/>
+            </div>
             <div className={styles.buttons__wrapper}>
                 <WhiteBtn>Сохранить</WhiteBtn>
                 <Link to="/login" className={styles.link__route}>Войти в аккаунт</Link>

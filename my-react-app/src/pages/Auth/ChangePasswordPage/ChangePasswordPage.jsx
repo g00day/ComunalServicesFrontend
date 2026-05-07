@@ -8,9 +8,11 @@ const ChangePasswordPage = () => {
 
     return (
         <AuthSection header={"Смена пароля"}>
-            <InputAuth title={"Старый пароль"} type="password"/>
-            <InputAuth title={"Новй пароль"} type="password"/>
-            <InputAuth title={"Новй пароль(повторно)"} type="password"/>
+            <div className={styles.desktop_input__wrapper}>
+                <InputAuth title={"Старый пароль"} type="password"/>
+                <InputAuth title={"Новй пароль"} type="password"/>
+                <InputAuth title={"Новй пароль(повторно)"} type="password"/>
+            </div>
             <div className={styles.buttons__wrapper}>
                 <WhiteBtn>Сохранить</WhiteBtn>
                 <Link to="/forgot-password" className={styles.link__route}>Забыли пароль?</Link>

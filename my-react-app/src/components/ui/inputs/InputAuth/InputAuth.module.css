@@ -1,5 +1,55 @@
+@media(min-width: 768px) {
+    .input__container {
+        font-family: 'JetBrains Mono', monospace;
+        display: flex;
+        flex-direction: column;
+    }
 
-@media(max-width: 768px) {
+    .input__header {
+        padding: 1.25rem;
+        color: #F7F7F7;
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+    
+    .input__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input__field {
+        border-radius: 1.25rem;
+        border: none;
+        width: 100%;
+        height: 3.5rem; 
+        padding: 0 2.5rem 0 2rem; 
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1.25rem; 
+        display: flex;
+        box-sizing: border-box;
+        outline: none;
+        align-items: center;
+        background-color: #F7F7F7;
+        color: #000000;
+    }
+
+    .show_pass_icn {
+        position: absolute;
+        background: none;
+        border: none;
+        padding: 0;
+        right: 1rem;
+        cursor: pointer;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media(max-width: 767px) {
     
     .input__container {
         font-family: 'JetBrains Mono', monospace;

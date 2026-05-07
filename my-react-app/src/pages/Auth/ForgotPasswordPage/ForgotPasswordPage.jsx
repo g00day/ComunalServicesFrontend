@@ -9,7 +9,9 @@ const ForgotPasswordPage = () => {
 
     return (
         <AuthSection header={"Забыли пароль"}>  
-            <InputAuth title={"Адрес эл.почты"}></InputAuth>
+            <div className={styles.desktop_input__wrapper}>
+                <InputAuth title={"Адрес эл.почты"}></InputAuth>
+            </div>
             <div className={styles.text__wrapper}>
                 <p className={styles.auth_section__text}>Важно! Проверяйте папки “Спам” и “Нежелательные сообщения”, письмо может прийти туда.</p>
             </div>

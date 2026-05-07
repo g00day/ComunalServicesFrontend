@@ -8,11 +8,13 @@ const RegistrationPage = () => {
 
     return (
         <AuthSection header={"Регистрация"}>
-                <InputAuth title={"Логин:"} type="text"/>
-                <InputAuth title={"Почта:"} type="text"/>
-                <InputAuth title={"Пароль:"} type="password"/>
-                <InputAuth title={"ФИО:"} type="text"/>
-                <InputAuth title={"Адрес жилищника:"} type="text"/>
+                <div className={styles.desktop_input__wrapper}>
+                    <InputAuth title={"Логин:"} type="text"/>
+                    <InputAuth title={"Почта:"} type="text"/>
+                    <InputAuth title={"Пароль:"} type="password"/>
+                    <InputAuth title={"ФИО:"} type="text"/>
+                    <InputAuth title={"Адрес жилищника:"} type="text"/>
+                </div>
                 <div className={styles.avatar__wrapper}>
                     <p className={styles.avatar__text}>Аватар</p>
                     <WhiteBtn>Загрузить</WhiteBtn>

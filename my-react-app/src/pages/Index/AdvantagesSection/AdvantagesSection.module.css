@@ -1,5 +1,46 @@
+@media(min-width: 768px){
+    .advantages__container {
+        font-family: 'JetBrains Mono', monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        margin-bottom: 15rem
+    }
 
-@media(max-width: 768px) {
+    .advantages__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 0.9;
+        color: #FFFFFF;
+        font-size: 2.5rem; 
+        font-weight: 700;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        margin-bottom: 6rem;
+    }
+
+    .desktop_1adv {
+        margin-right: 65%;
+        margin-left: 5%;
+    }
+
+    .desktop_2adv {
+        margin-left: 45%; 
+        margin-right: 5%;
+    }
+
+    .desktop_3adv {
+        margin-right: 50%;
+        margin-left: 5%;
+    }
+
+    
+}
+
+
+@media(max-width: 767px) {
 
     .advantages__container {
         font-family: 'JetBrains Mono', monospace;

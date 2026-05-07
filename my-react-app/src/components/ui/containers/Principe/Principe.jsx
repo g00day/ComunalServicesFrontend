@@ -1,11 +1,11 @@
 import styles from './Principe.module.css';
 
-const Principe = ({title, text, num}) => {
+const Principe = ({title, text, num, className}) => {
 
 
 
     return (
-        <div className={styles.principe}>
+        <div className={`${styles.principe} ${className || ''}`}>
             <div className={styles.principe__content}>
                 <h1 className={styles.principe__header}>
                     {title}
