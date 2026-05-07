@@ -126,34 +126,15 @@
     align-items: center;     /* По горизонтали */
   }
 
-  .mainButton {
-    background-color: #ccff00;
-    color: #000;
-    border: none;
-    border-radius: 0.75rem;
-    width: 100%;
-    padding: 10px 12px;
-    font-weight: bold;
-    font-size: 0.675rem;
-    cursor: pointer;
-    white-space: nowrap; 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Иконка и текст внутри кнопки прижаты к левому краю */
-    gap: 12px;
-    padding-left: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .icon {
-    width: 0.75rem;
-    height: 0.75rem;
-    object-fit: contain;
-    filter: brightness(100); 
-  }
 }
 
-@media(max-width: 350px) {
+
+@media(max-width: 360px) {
+
+    .buttonGroup p {
+      font-size: 0.6rem;
+    }
+
     .emailText {
         font-size: 0.525rem;
         color: #fff;
