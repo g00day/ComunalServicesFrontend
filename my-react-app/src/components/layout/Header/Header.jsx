@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import classes from "./Header.module.css";
+import useWindowSize from "@hooks/useWindowSize";
 
 import logo from "@icons/logo.svg";
 import burgerIcon from "@icons/burger.svg";
@@ -14,7 +15,10 @@ const menuItems = [
 ];
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { width, _ } = useWindowSize();
+  const [isOpen, setIsOpen] = useState(width > 768);
+
+  const currentPath = window.location.pathname;
 
   const menuVariants = {
     closed: {
@@ -43,30 +47,60 @@ const Header = () => {
         <div className={classes.topRow}>
           <img src={logo} alt="Logo" className={classes.logo} />
           
+          {/* Показываем меню только на больших экранах, на мобильных оно будет в виде бургер-меню */}
+          {width > 768 && (
+            <AnimatePresence>
+              {isOpen && (
+                <motion.nav className={classes.menu}>
+                  <ul className={classes.list}>
+                    {menuItems.map((item) => {
+                      const isActive = currentPath === item.link;
+                      return (
+                      <motion.li 
+                        key={item.id} 
+                        variants={itemVariants}
+                        className={classes.menuItem}
+                      >
+                        <a href={item.link} className={`${classes.link} ${isActive ? classes.activeLink : ""}`}>
+                          {item.title}
+                        </a>
+                      </motion.li>
+                      )
+                    })}
+                  </ul>
+                </motion.nav>
+            )}
+            </AnimatePresence>
+          )}
           <button className={classes.burgerBtn} onClick={() => setIsOpen(!isOpen)}>
             <img src={isOpen ? crossIcon : burgerIcon} alt="Toggle Menu" />
           </button>
         </div>
 
-        <AnimatePresence>
-          {isOpen && (
-            <motion.nav className={classes.menu}>
-              <ul className={classes.list}>
-                {menuItems.map((item) => (
-                  <motion.li 
-                    key={item.id} 
-                    variants={itemVariants}
-                    className={classes.menuItem}
-                  >
-                    <a href={item.link} className={classes.link}>
+        {width < 768 && (
+          <AnimatePresence>
+            {isOpen && (
+              <motion.nav className={classes.menu}>
+                <ul className={classes.list}>
+                  {menuItems.map((item) => {
+                    const isActive = currentPath === item.link;
+                    return (
+                      <motion.li 
+                        key={item.id} 
+                        variants={itemVariants}
+                        className={classes.menuItem}
+                      >
+                    <a href={item.link} className={`${classes.link} ${isActive ? classes.activeLink : ""}`}>
                       {item.title}
                     </a>
                   </motion.li>
-                ))}
+                  )
+                    })}
               </ul>
             </motion.nav>
           )}
         </AnimatePresence>
+        )}
       </motion.div>
     </header>
   );
