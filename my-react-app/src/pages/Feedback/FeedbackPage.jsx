@@ -1,6 +1,7 @@
 import classes from "./FeedbackPage.module.css";
 import mailIcon from "@icons/mail.svg";
 import telegramIcon from "@icons/telegram.svg";
+import YellowBtn from "../../components/ui/buttons/YellowBtn/YellowBtn";
 
 const FeedbackPage = () => {
   return (
@@ -32,14 +33,8 @@ const FeedbackPage = () => {
 
       <div className={classes.actionSection}>
         <div className={classes.buttonContainer}>
-          <button className={classes.mainButton}>
-            <img src={mailIcon} alt="" className={classes.icon} />
-            Написать
-          </button>
-          <button className={classes.mainButton}>
-            <img src={telegramIcon} alt="" className={classes.icon} />
-            Открыть чат
-          </button>
+          <YellowBtn pathSvg={mailIcon}>Написать</YellowBtn>
+          <YellowBtn pathSvg={telegramIcon}>Открыть чат</YellowBtn>
         </div>
       </div>
     </div>
