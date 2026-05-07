@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router";
 // Pages
 import IndexPage from '@/pages/Index/IndexPage';
 
+import AppealPage from '@/pages/AppealPage/AppealPage';
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<IndexPage />} />
+        <Route path="appeal/demo/" element={<AppealPage />}/>
       </Routes>
     </BrowserRouter>
     <Footer/>

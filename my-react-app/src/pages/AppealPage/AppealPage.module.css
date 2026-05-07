@@ -1,0 +1,155 @@
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .ticketHeader {
+    margin-bottom: 20px;
+  }
+  
+  .ticketHeader h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .titleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .metaInfo {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .contentSection h3 {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+  }
+
+  .contentSection p {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin: 0;
+  }
+
+
+  .chatBox {
+    background-color: #181818; 
+    border-radius: 0.5rem;
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    overflow: hidden;
+    min-height: 400px; 
+  }
+
+
+  .chatMessages {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    padding-bottom: 70px;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .myMessage {
+    align-self: flex-end;
+    background-color: #1a73e8;
+    color: white;
+    border-bottom-right-radius: 2px;
+  }
+
+  .otherMessage {
+    align-self: flex-start;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom-left-radius: 2px;
+  }
+
+  .msgHeader {
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .inputWrapper {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .inputWrapper input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    padding: 8px 0;
+    color: #000;
+  }
+
+  .iconBtn {
+    border: none;
+    cursor: pointer;
+    background-color: #1a73e8;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .iconBtn img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+
+@media (max-width: 350px) {
+    .iconBtn {
+        border: none;
+        cursor: pointer;
+        background-color: #1a73e8;
+
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  }
+}
