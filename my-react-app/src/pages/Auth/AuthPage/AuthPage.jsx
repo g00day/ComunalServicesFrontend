@@ -13,7 +13,7 @@ const AuthPage = () => {
             </div>
             <div className={styles.buttons__wrapper}>
                 <WhiteBtn>Войти в аккаунт</WhiteBtn>
-                <WhiteBtn isLink={true} to="/register">Зарегистрироваться</WhiteBtn>
+                <WhiteBtn isLink={true} to="/registration">Зарегистрироваться</WhiteBtn>
                 <Link to="/forgot-password" className={styles.link__route}>Забыли пароль?</Link>
             </div>
         </AuthSection>

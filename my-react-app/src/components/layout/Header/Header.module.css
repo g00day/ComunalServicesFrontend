@@ -1,5 +1,4 @@
 .header {
-  padding: 3rem 16rem;
   font-family: 'JetBrains Mono', monospace;
   width: 100%;
 }
@@ -11,10 +10,12 @@
 
 
 .navBar {
+  margin: 1rem 6rem;
   background-color: #181818;
   border-radius: 10rem;
   overflow: hidden; 
   padding: 20px 40px;
+  min-width: 775px;
 }
 
 .topRow {
@@ -72,6 +73,13 @@
   color: #ffffff;
 }
 
+@media (max-width: 960px) {
+  .navBar {
+    margin: 1rem 1rem;
+    min-width: 0;
+  }
+}
+
 
 @media (max-width: 768px) {
 
@@ -80,6 +88,7 @@
   }
 
   .navBar {
+    margin: 0;
     padding: 14px 20px;
     border-radius: 1rem;
   }

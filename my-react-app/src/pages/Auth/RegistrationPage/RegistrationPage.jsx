@@ -22,7 +22,7 @@ const RegistrationPage = () => {
                 <p className={styles.avatar__loaded}>Загружен: typa_ya.jpg</p>
                 <div className={styles.buttons__wrapper}>
                     <WhiteBtn>Запросить письмо</WhiteBtn>
-                    <Link to="/login" className={styles.link__route}>Войти в аккаунт</Link>
+                    <Link to="/auth" className={styles.link__route}>Войти в аккаунт</Link>
                 </div>
         </AuthSection>
         )

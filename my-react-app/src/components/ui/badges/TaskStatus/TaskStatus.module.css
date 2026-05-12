@@ -1,6 +1,74 @@
+@media(min-width: 768px) {
+    .created {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        max-width: 6rem;
+        max-height: 2rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #1A73E8;
+        color: #F9F9F9;
+    }
 
+    .in_work {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        max-width: 6rem;
+        max-height: 2rem;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #D0FF00;
+        color: #000000;
+    }
 
-@media(max-width: 768px) {
+    .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        max-width: 6rem;
+        max-height: 2rem;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #E03B16;
+        color: #F9F9F9;
+    }
+
+    .in_heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        max-width: 3.5rem;
+        max-height: 1rem;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.5rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #FF0000;
+        color: #FFFFFF;
+    }
+}
+
+@media(max-width: 767px) {
     .created {
         display: flex;
         justify-content: center;
@@ -50,5 +118,22 @@
         font-weight: 500;
         background-color: #E03B16;
         color: #F9F9F9;
+    }
+
+    .in_heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        max-width: 3.5rem;
+        max-height: 1rem;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 1rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.5rem;
+        width: 100%;
+        font-weight: 500;
+        background-color: #FF0000;
+        color: #FFFFFF;
     }
 }

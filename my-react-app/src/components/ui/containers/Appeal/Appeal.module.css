@@ -1,5 +1,99 @@
 
 
+@media (min-width: 768px){
+    .appeal__container{
+        background-color: #151515;
+        border: 2px solid #262626;
+        border-radius: 1.75rem; 
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 2rem ; 
+        font-family: 'JetBrains Mono', monospace;
+        width: 100%;
+        max-width: 960px;
+    }
+
+    .spaceBetween {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .appeal__header {
+        white-space: nowrap;      
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0; 
+        max-width: 600px;
+        color: #FFFFFF; 
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    .appeal__text {
+        padding-top: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgba(255,255,255,0.4);
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 300;
+        padding-bottom: 0.75rem;
+    }
+
+    .appeal__create_time {
+        font-size: 0.75rem;
+        color: #FFFFFF;
+        margin: 0;
+        font-weight: 200;
+    }
+    
+    .new_mess__count {
+        font-size: 0.75rem;
+        color: #B8B8B8; 
+    }
+
+    .new_mess__circle {
+        background: none;
+        margin: 0;
+        border: none;
+        padding: 0;
+        display: flex;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .icn_mess {
+        background: none;
+        margin: 0;
+        border: none;
+        padding: 0;
+        display: flex;
+        width: 100%; 
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .head_status__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .appeal__create_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .appeal__count_new_mess_wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+}
+
 @media (max-width: 767px){
     .appeal__container{
         background-color: #151515;
@@ -31,6 +125,12 @@
         font-size: 0.5rem;
         font-weight: 300;
         padding-bottom: 0.5rem;
+    }
+
+    .spaceBetween {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .appeal__create_time {
@@ -70,6 +170,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        justify-content: space-between;
         gap: 0.5rem;
         width: 100%;
     }

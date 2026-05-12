@@ -12,6 +12,10 @@ import AuthPage from '@/pages/Auth/AuthPage/AuthPage';
 import ChangePasswordPage from '@/pages/Auth/ChangePasswordPage/ChangePasswordPage';
 import ForgotPasswordPage from '@/pages/Auth/ForgotPasswordPage/ForgotPasswordPage';
 import RegistratonPage from '@/pages/Auth/RegistrationPage/RegistrationPage';
+import FeedbackPage from '@/pages/Feedback/FeedbackPage';
+import AppealPage from '@/pages/AppealPage/AppealPage';
+import ProfilePage from '@/pages/ProfilePage/ProfilePage';
+import AppealsPage from '@/pages/AppealsPage/AppealsPage';
 
 function App() {
 
@@ -25,6 +29,10 @@ function App() {
         <Route path="/change-password" element={<ChangePasswordPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/registration" element={<RegistratonPage />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
+        <Route path="/appeals" element={<AppealsPage />} />
+        <Route path="/appeal" element={<AppealPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
     <Footer/>

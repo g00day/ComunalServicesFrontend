@@ -15,6 +15,11 @@ const TaskStatus = ({status}) => {
         return (
             <div className={styles.close}>Закрыто</div>
         )
+    } 
+    else if (status === "in_heart"){
+        return (
+            <div className={styles.in_heart}>В сердце</div>
+        )
     }
 }
 

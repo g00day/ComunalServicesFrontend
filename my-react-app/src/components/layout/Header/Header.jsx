@@ -9,7 +9,7 @@ import crossIcon from "@icons/cross.svg";
 
 const menuItems = [
   { id: 1, title: "Главная", link: "/" },
-  { id: 2, title: "Заявления", link: "/applications" },
+  { id: 2, title: "Заявления", link: "/appeals" },
   { id: 3, title: "Профиль", link: "/profile" },
   { id: 4, title: "Обратная связь", link: "/feedback" },
 ];
