@@ -13,7 +13,7 @@ const PasswordResetPage = () => {
             </div>
             <div className={styles.buttons__wrapper}>
                 <WhiteBtn>Сохранить</WhiteBtn>
-                <Link to="/login" className={styles.link__route}>Войти в аккаунт</Link>
+                <Link to="/auth" className={styles.link__route}>Войти в аккаунт</Link>
             </div>
         </AuthSection>
     )

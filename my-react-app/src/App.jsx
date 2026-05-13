@@ -16,6 +16,7 @@ import FeedbackPage from '@/pages/Feedback/FeedbackPage';
 import AppealPage from '@/pages/AppealPage/AppealPage';
 import ProfilePage from '@/pages/ProfilePage/ProfilePage';
 import AppealsPage from '@/pages/AppealsPage/AppealsPage';
+import PasswordResetPage from '@/pages/auth/PasswordResetPage/PasswordResetPage';
 
 const MainLayout = () => {
   return (
@@ -40,7 +41,6 @@ function App() {
           <Route path="/" element={<IndexPage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/appeals" element={<AppealsPage />} />
-          <Route path="/appeal" element={<AppealPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Route>
 
@@ -48,6 +48,8 @@ function App() {
         <Route path="/change-password" element={<ChangePasswordPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/registration" element={<RegistratonPage />} />
+        <Route path="/password-reset" element={<PasswordResetPage />} />
+        <Route path="/appeal" element={<AppealPage />} />
 
       </Routes>
     </BrowserRouter>

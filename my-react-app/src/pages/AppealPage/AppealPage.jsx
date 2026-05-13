@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from "./AppealPage.module.css";
 import TaskStatus from '@components/ui/badges/TaskStatus/TaskStatus';
-
+import Message from '@components/ui/containers/Message/Message'; 
+import {Link} from 'react-router-dom'
 
 import attachmentIcon from "@icons/attachment.svg";
 import topArrowIcon from "@icons/topArrow.svg";
@@ -22,37 +23,55 @@ const AppealPage = () => {
           <h3>Содержание:</h3>
           <p>Помогите.</p>
         </div>
+        <div className={classes.closeAppeal}>
+            <Link to="/appeals" className={classes.link__route}>Выйти из обращения</Link>
+        </div>
       </div>
 
       <div className={classes.chatBox}>
         <div className={classes.chatMessages}>
-          <div className={`${classes.message} ${classes.myMessage}`}>
-            Здравствуйте! Опишите, пожалуйста, Вашу проблему.
-          </div>
+          
+          <Message 
+            isUser={false} 
+            first_name="" 
+            last_name="Вы" 
+            formattedDate="11.05.25 12:00" 
+            mess="Здравствуйте! Опишите, пожалуйста, Вашу проблему." 
+          />
 
-          <div className={`${classes.message} ${classes.otherMessage}`}>
-            <span className={classes.msgHeader}>Василий Бодров (11.05.25 23:44):</span>
-            Моя мама забрала мой компьютер - помогите!!!!!!!
-          </div>
+          <Message 
+            isUser={true} 
+            first_name="Бодров" 
+            last_name="Василий" 
+            formattedDate="11.05.25 23:44" 
+            mess="Моя мама забрала мой компьютер - помогите!!!!!!!" 
+          />
 
-          <div className={`${classes.message} ${classes.myMessage}`}>
-            <span className={classes.msgHeader}>Вы (12.05.25 12:12):</span>
-            Нам вас очень жалко, но ничем помочь не можем.
-          </div>
+          <Message 
+            isUser={false} 
+            first_name="" 
+            last_name="Вы" 
+            formattedDate="12.05.25 12:12" 
+            mess="Нам вас очень жалко, но ничем помочь не можем." 
+          />
 
-          <div className={`${classes.message} ${classes.otherMessage}`}>
-            <span className={classes.msgHeader}>Василий Бодров (12.05.25 13:23):</span>
-            Прощайте, больше здесь меня не будет ((((
-          </div>
+          <Message 
+            isUser={true} 
+            first_name="Бодров" 
+            last_name="Василий" 
+            formattedDate="12.05.25 13:23" 
+            mess="Прощайте, больше здесь меня не будет ((((" 
+          />
+
         </div>
 
         <div className={classes.inputWrapper}>
           <input type="text" placeholder="Напишите что-то..." />
           <button className={classes.iconBtn}>
-            <img src={attachmentIcon} />
+            <img src={attachmentIcon} alt="Прикрепить" />
           </button>
           <button className={classes.iconBtn}>
-            <img src={topArrowIcon} />
+            <img src={topArrowIcon} alt="Отправить" />
           </button>
         </div>
       </div>
