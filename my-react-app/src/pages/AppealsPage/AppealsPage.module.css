@@ -8,7 +8,6 @@
         font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Список обращений */
     .appealsPage__list {
         display: grid;
         grid-template-columns: 1fr;
@@ -22,7 +21,6 @@
         transition: filter 0.4s ease, opacity 0.4s ease;
     }
 
-    /* Эффект при открытой форме */
     .blurred {
         filter: blur(15px);
         opacity: 0.6;
@@ -89,7 +87,6 @@
         color: #ffffff;
     }
 
-    /* Поля ввода как на макете */
     .appealsPage__input,
     .appealsPage__textarea {
         width: 100%;
@@ -156,7 +153,6 @@
         font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Список обращений */
     .appealsPage__list {
         display: flex;
         flex-direction: column;
@@ -166,14 +162,12 @@
         transition: filter 0.4s ease, opacity 0.4s ease;
     }
 
-    /* Эффект при открытой форме */
     .blurred {
         filter: blur(15px);
         opacity: 0.6;
         pointer-events: none;
     }
 
-    /* Стили карточки обращения */
     .appealsPage__card {
         background-color: #1c1c1e;
         border-radius: 20px;
@@ -229,7 +223,6 @@
         height: 14px;
     }
 
-    /* Кнопка Плюс */
     .appealsPage__fabContainer {
         position: fixed;
         right: 20px;
@@ -237,7 +230,6 @@
         z-index: 40;
     }
 
-    /* Затемнение фона при открытии формы */
     .backdrop {
         position: fixed;
         top: 0;
@@ -249,7 +241,6 @@
         z-index: 50;
     }
 
-    /* Обертка выплывающей формы (Bottom Sheet) */
     .appealsPage__formWrapper {
         position: fixed;
         left: 0;
@@ -263,8 +254,8 @@
     .appealsPage__formCard {
         background-color: #0c0c0c;
         border: 1px solid #1c1c1e;
-        border-radius: 28px 28px 0 0; /* Скругление только сверху */
-        padding: 24px 24px 40px 24px; /* Увеличен нижний отступ */
+        border-radius: 28px 28px 0 0; 
+        padding: 24px 24px 40px 24px; 
         width: 100%;
         max-width: 600px;
         box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
@@ -289,7 +280,6 @@
         color: #ffffff;
     }
 
-    /* Поля ввода как на макете */
     .appealsPage__input,
     .appealsPage__textarea {
         width: 100%;
@@ -304,7 +294,7 @@
     }
 
     .appealsPage__textarea {
-        height: 180px; /* Оптимально для мобильного экрана */
+        height: 180px; 
         resize: none;
     }
 
@@ -313,7 +303,6 @@
         color: #c4c4c4;
     }
 
-    /* Кнопки в форме */
     .appealsPage__formFooter {
         display: flex;
         justify-content: space-between;

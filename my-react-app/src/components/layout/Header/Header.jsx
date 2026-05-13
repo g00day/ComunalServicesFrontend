@@ -22,11 +22,11 @@ const Header = () => {
 
   const menuVariants = {
     closed: {
-      height: "60px", // Высота закрытого хедера
+      height: "60px", 
       transition: { duration: 0.3, ease: "easeInOut", when: "afterChildren" }
     },
     open: {
-      height: "auto", // Раскрывается по контенту
+      height: "auto", 
       transition: { duration: 0.3, ease: "easeInOut", when: "beforeChildren" }
     }
   };
@@ -48,7 +48,6 @@ const Header = () => {
         <div className={classes.topRow}>
           <img src={logo} alt="Logo" className={classes.logo} />
           
-          {/* Показываем меню только на больших экранах, на мобильных оно будет в виде бургер-меню */}
           {width > 768 && (
             <AnimatePresence>
               {isOpen && (

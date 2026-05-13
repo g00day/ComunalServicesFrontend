@@ -30,7 +30,6 @@ const AppealsPage = () => {
                 ))}
             </div>
 
-            {/* Кнопка Плюс (скрываем, когда форма открыта) */}
             <AnimatePresence>
                 {!isFormOpen && (
                     <motion.div 
@@ -44,11 +43,9 @@ const AppealsPage = () => {
                 )}
             </AnimatePresence>
 
-            {/* Анимированная форма */}
             <AnimatePresence>
                 {isFormOpen && (
                     <>
-                        {/* Затемнение фона */}
                         <motion.div 
                             className={styles.backdrop}
                             initial={{ opacity: 0 }}
@@ -57,12 +54,11 @@ const AppealsPage = () => {
                             onClick={() => setIsFormOpen(false)}
                         />
                         
-                        {/* Сама форма */}
                         <motion.div 
                             className={styles.appealsPage__formWrapper}
-                            initial={{ y: "100%" }} // Начинаем за экраном внизу
-                            animate={{ y: 0 }}      // Выезжаем вверх
-                            exit={{ y: "100%" }}    // Уезжаем вниз при закрытии
+                            initial={{ y: "100%" }} 
+                            animate={{ y: 0 }}      
+                            exit={{ y: "100%" }}    
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
                         >
                             <div className={styles.appealsPage__formCard}>
