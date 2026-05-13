@@ -1,5 +1,47 @@
+    .indexPage__container {
+        font-family: 'JetBrains Mono', monospace;
+        position: relative;
+        overflow: hidden;
+    }
 
-@media(max-width: 768px) {
+    .indexPage__slogan {
+        font-family: 'JetBrains Mono', monospace;
+        display: flex;
+        flex-direction: column;
+        margin-left: 8rem;
+        margin-top: 8rem;
+        margin-bottom: 30%;
+    }
+
+    .indexPage__header {
+        line-height: 0.9;
+        color: #FFFFFF;
+        font-size: 5rem; 
+        font-weight: 700;
+        width: 100%;
+        padding: 1rem 2rem 0rem 2rem;
+    }
+    .indexPage__secondText {
+        color: #FFFFFF;
+        font-size: 2.75rem;
+        font-weight: 200;
+        width: 100%;
+        padding: 0rem 0rem 2rem 2rem;
+    }
+
+    .abstract_image {
+        position: absolute;
+        right: 0;
+        height: 35%;
+        top: 50%;
+        width: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+
+@media(max-width: 767px) {
 
     .indexPage__container {
         font-family: 'JetBrains Mono', monospace;
@@ -11,6 +53,7 @@
         font-family: 'JetBrains Mono', monospace;
         display: flex;
         flex-direction: column;
+        margin: 0;
     }
 
     .indexPage__header {

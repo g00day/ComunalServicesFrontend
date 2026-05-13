@@ -9,13 +9,15 @@ const ForgotPasswordPage = () => {
 
     return (
         <AuthSection header={"Забыли пароль"}>  
-            <InputAuth title={"Адрес эл.почты"}></InputAuth>
+            <div className={styles.desktop_input__wrapper}>
+                <InputAuth title={"Адрес эл.почты"}></InputAuth>
+            </div>
             <div className={styles.text__wrapper}>
                 <p className={styles.auth_section__text}>Важно! Проверяйте папки “Спам” и “Нежелательные сообщения”, письмо может прийти туда.</p>
             </div>
             <div className={styles.buttons__wrapper}>
                 <WhiteBtn>Запросить письмо</WhiteBtn>
-                <Link to="/login" className={styles.link__route}>Войти в аккаунт</Link>
+                <Link to="/auth" className={styles.link__route}>Войти в аккаунт</Link>
             </div>
 
         </AuthSection>

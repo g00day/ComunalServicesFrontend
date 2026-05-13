@@ -7,11 +7,13 @@ import {Link} from 'react-router-dom'
 const AuthPage = () => {
     return (
         <AuthSection header={"Войти"}>
-            <InputAuth title={"Логин"} type="text"/>
-            <InputAuth title={"Пароль"} type="password"/>
+            <div className={styles.desktop_input__wrapper}>
+                <InputAuth title={"Логин"} type="text"/>
+                <InputAuth title={"Пароль"} type="password" className={styles.desktop_input}/>
+            </div>
             <div className={styles.buttons__wrapper}>
                 <WhiteBtn>Войти в аккаунт</WhiteBtn>
-                <WhiteBtn isLink={true} to="/register">Зарегистрироваться</WhiteBtn>
+                <WhiteBtn isLink={true} to="/registration">Зарегистрироваться</WhiteBtn>
                 <Link to="/forgot-password" className={styles.link__route}>Забыли пароль?</Link>
             </div>
         </AuthSection>

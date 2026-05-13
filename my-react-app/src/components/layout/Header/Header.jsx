@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import classes from "./Header.module.css";
+import useWindowSize from "@hooks/useWindowSize";
 
 import logo from "@icons/logo.svg";
 import burgerIcon from "@icons/burger.svg";
@@ -8,21 +9,24 @@ import crossIcon from "@icons/cross.svg";
 
 const menuItems = [
   { id: 1, title: "Главная", link: "/" },
-  { id: 2, title: "Заявления", link: "/applications" },
+  { id: 2, title: "Заявления", link: "/appeals" },
   { id: 3, title: "Профиль", link: "/profile" },
   { id: 4, title: "Обратная связь", link: "/feedback" },
 ];
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { width, _ } = useWindowSize();
+  const [isOpen, setIsOpen] = useState(width > 768);
+
+  const currentPath = window.location.pathname;
 
   const menuVariants = {
     closed: {
-      height: "60px", // Высота закрытого хедера
+      height: "60px", 
       transition: { duration: 0.3, ease: "easeInOut", when: "afterChildren" }
     },
     open: {
-      height: "auto", // Раскрывается по контенту
+      height: "auto", 
       transition: { duration: 0.3, ease: "easeInOut", when: "beforeChildren" }
     }
   };
@@ -33,6 +37,7 @@ const Header = () => {
   };
 
   return (
+    <>
     <header className={classes.header}>
       <motion.div 
         className={classes.navBar}
@@ -43,32 +48,63 @@ const Header = () => {
         <div className={classes.topRow}>
           <img src={logo} alt="Logo" className={classes.logo} />
           
+          {width > 768 && (
+            <AnimatePresence>
+              {isOpen && (
+                <motion.nav className={classes.menu}>
+                  <ul className={classes.list}>
+                    {menuItems.map((item) => {
+                      const isActive = currentPath === item.link;
+                      return (
+                      <motion.li 
+                        key={item.id} 
+                        variants={itemVariants}
+                        className={classes.menuItem}
+                      >
+                        <a href={item.link} className={`${classes.link} ${isActive ? classes.activeLink : ""}`}>
+                          {item.title}
+                        </a>
+                      </motion.li>
+                      )
+                    })}
+                  </ul>
+                </motion.nav>
+            )}
+            </AnimatePresence>
+          )}
           <button className={classes.burgerBtn} onClick={() => setIsOpen(!isOpen)}>
             <img src={isOpen ? crossIcon : burgerIcon} alt="Toggle Menu" />
           </button>
         </div>
 
-        <AnimatePresence>
-          {isOpen && (
-            <motion.nav className={classes.menu}>
-              <ul className={classes.list}>
-                {menuItems.map((item) => (
-                  <motion.li 
-                    key={item.id} 
-                    variants={itemVariants}
-                    className={classes.menuItem}
-                  >
-                    <a href={item.link} className={classes.link}>
+        {width < 768 && (
+          <AnimatePresence>
+            {isOpen && (
+              <motion.nav className={classes.menu}>
+                <ul className={classes.list}>
+                  {menuItems.map((item) => {
+                    const isActive = currentPath === item.link;
+                    return (
+                      <motion.li 
+                        key={item.id} 
+                        variants={itemVariants}
+                        className={classes.menuItem}
+                      >
+                    <a href={item.link} className={`${classes.link} ${isActive ? classes.activeLink : ""}`}>
                       {item.title}
                     </a>
                   </motion.li>
-                ))}
+                  )
+                    })}
               </ul>
             </motion.nav>
           )}
         </AnimatePresence>
+        )}
       </motion.div>
     </header>
+    <div className={classes.headerSpacer} /> 
+    </>
   );
 };
 

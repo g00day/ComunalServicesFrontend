@@ -12,8 +12,10 @@ const Appeal = ({hasNewMess=false, title, text, createTime, countNewMess, status
                 {hasNewMess && (
                     <img src={redCircleIcon} alt="icon" className={styles.new_mess__icn}/>
                 )}
-                <h2 className={styles.appeal__header}>{title}</h2>
-                <TaskStatus status={status}/>
+                <div className={styles.spaceBetween}>
+                    <h2 className={styles.appeal__header}>{title}</h2>
+                    <TaskStatus status={status}/>
+                </div>
             </div>
             <div>
                 <p className={styles.appeal__text}>{text}</p>

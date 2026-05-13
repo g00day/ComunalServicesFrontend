@@ -1,6 +1,40 @@
+@media(min-width: 768px) {
+    .yellow_btn{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.75rem; 
+        width: 100%;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1.25rem;
+        border-radius: 0.75rem;
+        background-color: #D0FF00;
+        color: #020202;
+    }
 
+    .yellow_btn:hover{
+        cursor: pointer;
+        
+    }
 
-@media(max-width: 768px) {
+    .btn__icon { 
+        filter: brightness(0);
+        background: none;
+        border: none;
+        height: 0.8rem;
+        width: auto;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        margin-right: 0.5rem;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 767px) {
     .yellow_btn{
         border: none;
         display: flex;
@@ -14,7 +48,13 @@
         color: #020202;
     }
 
+    .yellow_btn:hover{
+        cursor: pointer;
+
+    }
+
     .btn__icon { 
+        filter: brightness(0);
         background: none;
         border: none;
         padding: 0;

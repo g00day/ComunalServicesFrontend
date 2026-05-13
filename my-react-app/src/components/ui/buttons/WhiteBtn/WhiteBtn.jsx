@@ -5,16 +5,18 @@ const WhiteBtn = ({compHeight="32px", isLink=false, children, ...props }) => {
     if (isLink) {
         return (
             <Link 
-                style={{ height: compHeight, display: 'flex', alignItems: 'center', justifyContent: 'center' }} 
-                className={styles.white_btn} 
+                style={{ height: compHeight, display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }} 
+                
                 {...props}
             >
-                <p className={styles.white_btn__text}>{children}</p>
+                <button className={styles.white_btn} >
+                    <p className={styles.white_btn__text}>{children}</p>
+                </button>
             </Link>
         );
     } else {
             return (
-                <button style={{heigth: {compHeight}}} className={styles.white_btn}>
+                <button className={styles.white_btn}>
                     <p className={styles.white_btn__text}>{children}</p>
                 </button>
             )
