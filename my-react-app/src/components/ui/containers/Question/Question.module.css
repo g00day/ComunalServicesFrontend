@@ -9,6 +9,10 @@
         background-color: #141313;
         border: 2px solid #3D3D3D;
         margin: 1rem 30rem;
+
+        width: 90%;
+        max-width: 800px;
+        margin: 1rem auto;
     }
 
     .question__header{

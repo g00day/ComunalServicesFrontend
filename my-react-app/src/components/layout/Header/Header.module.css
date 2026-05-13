@@ -1,6 +1,12 @@
 .header {
   font-family: 'JetBrains Mono', monospace;
   width: 100%;
+  z-index: 1000;
+  position: fixed;
+}
+
+.headerSpacer {
+  height: 10rem;
 }
 
 .link.activeLink {
@@ -11,7 +17,9 @@
 
 .navBar {
   margin: 1rem 6rem;
-  background-color: #181818;
+  background-color: rgba(94,93,93,0.2);
+  backdrop-filter: blur(1.5rem);
+  -webkit-backdrop-filter: blur(1.5rem);
   border-radius: 10rem;
   overflow: hidden; 
   padding: 20px 40px;
@@ -78,10 +86,20 @@
     margin: 1rem 1rem;
     min-width: 0;
   }
+
+  .headerSpacer {
+    height: 7.5rem;
+  }
+
 }
 
 
 @media (max-width: 768px) {
+
+
+  .headerSpacer {
+    height: 5rem;
+  }
 
   .header {
    padding: 10px 16px;

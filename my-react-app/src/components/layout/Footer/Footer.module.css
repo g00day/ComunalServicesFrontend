@@ -5,11 +5,15 @@
   font-family: Inter;
   font-size: 0.5rem;
   color: white;
+ 
+  margin-top: auto;
+  margin-bottom: 0 !important; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 
@@ -57,7 +61,7 @@
 
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
-    margin-top: 2rem; 
+    margin-top: 9rem;
   }
 
   .contentWrapper {

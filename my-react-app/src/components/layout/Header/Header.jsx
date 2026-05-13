@@ -37,6 +37,7 @@ const Header = () => {
   };
 
   return (
+    <>
     <header className={classes.header}>
       <motion.div 
         className={classes.navBar}
@@ -103,6 +104,8 @@ const Header = () => {
         )}
       </motion.div>
     </header>
+    <div className={classes.headerSpacer} /> 
+    </>
   );
 };
 

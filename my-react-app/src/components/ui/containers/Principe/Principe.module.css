@@ -9,6 +9,7 @@
         font-family: 'JetBrains Mono', monospace;
         border-radius: 1rem;
         min-height: 180px;
+        min-width: 380px;
         background-color: rgba(32, 30, 30, 0.2);
         backdrop-filter: blur(2rem);
         -webkit-backdrop-filter: blur(2rem);
